@@ -1,21 +1,21 @@
 {
-	"name": "wext-manifest-webpack-plugin",
-	"version": "1.2.1",
+	"name": "@interc0der/wext-manifest-webpack-plugin",
+	"version": "0.0.1",
 	"description": "Webpack plugin to solve the problem of generating js file for manifest.json entry",
-	"license": "MIT",
-	"repository": "https://github.com/abhijithvijayan/wext-manifest-webpack-plugin.git",
+	"license": "GNU GPL-3.0",
+	"repository": "https://github.com/interc0der/wext-manifest-webpack-plugin.git",
 	"author": {
-		"name": "abhijithvijayan",
-		"email": "email@abhijithvijayan.in",
-		"url": "https://abhijithvijayan.in"
+		"name": "interc0der",
+		"email": "dev@whirled.io",
+		"url": "https://github.com/interc0der/"
 	},
 	"engines": {
 		"node": ">=10.0.0"
 	},
-	"main": "lib/index.js",
+	"main": "dist/js/index.js",
 	"types": "lib",
 	"files": [
-		"lib"
+		"dist"
 	],
 	"scripts": {
 		"dev": "tsc --watch",

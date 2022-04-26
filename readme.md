@@ -5,8 +5,11 @@
     </a>
 </p>
 
+<h1 align="center">wext-manifest-webpack-plugin</h1>
+<p align="center">Webpack plugin to solve the problem of generating js file for manifest.json entry</p>
+
 <!-- Project Title -->
-<p align="center" style="text-align: center; margin:0px">wext-manifest-webpack-plugin</p>
+<p align="center" style="text-align: center; margin:0px">browser-extension-template</p>
 
 <!-- Project Shields -->
 <p align="center" style="text-align: center;">
@@ -31,18 +34,50 @@
 </p>
 
 <p align="center" style="text-align:center; margin:0px">
-Webpack plugin to solve the problem of generating js file for manifest.json entry
+Browser extension template with cross-browser compatibility
 </p>
 
-## Modifications
+## File Structure
 
-The project has been modified with updated packages to prevent incompatibiity issues with older version of webpack, fixes for builds that include MapSource files, etc.
+The file structure has been modified to match a conventional ReactJS project.
+
+```
+├── build
+│   ├── chrome
+│   ├── firefox
+│   ├── opera
+├── config
+├── public
+│   ├── index.html
+│   ├── popup.html
+│   ├── options.html
+│   ├── manifest.json
+├── scripts
+├── src
+│   ├── components (shared)
+│   ├── pages
+│   │   ├──  index
+│   │   │   ├──   index.ts
+│   │   │   ├──   index.scss
+│   │   ├──  popup
+│   │   │   ├──   index.ts
+│   │   │   ├──   index.scss
+│   │   ├──  options
+│   │   │   ├──   index.ts
+│   │   │   ├──   index.scss
+├── docs
+├── node_modules
+├── jest.config.js
+├── tsconfig.json
+├── yarn.lock
+├── package.json
+```
 
 ## Features
 
 coming soon...
 
-## Placeholder
+## Cross-browser compatibility
 
 coming soon...
 
