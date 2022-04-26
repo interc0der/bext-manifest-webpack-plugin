@@ -1,6 +1,6 @@
 {
 	"name": "@interc0der/wext-manifest-webpack-plugin",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"description": "Webpack plugin to solve the problem of generating js file for manifest.json entry",
 	"license": "GNU GPL-3.0",
 	"repository": "https://github.com/interc0der/wext-manifest-webpack-plugin.git",
@@ -12,7 +12,7 @@
 	"engines": {
 		"node": ">=10.0.0"
 	},
-	"main": "dist/js/index.js",
+	"main": "dist/js/src/index.js",
 	"types": "lib",
 	"files": [
 		"dist"
