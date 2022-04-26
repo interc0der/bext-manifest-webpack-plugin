@@ -2,7 +2,7 @@ name: release-bot
 
 on:
   release:
-    types: [created, published, released]
+    types: [created]
 
 jobs:
   build:
