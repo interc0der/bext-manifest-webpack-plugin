@@ -17,6 +17,9 @@
 	"files": [
 		"dist"
 	],
+	"publishConfig": {
+		"@interc0der:registry": "https://npm.pkg.github.com"
+	  },
 	"scripts": {
 		"dev": "tsc --watch",
 		"build": "tsc",
