@@ -1,28 +1,25 @@
-/* eslint-disable import/no-extraneous-dependencies */
-
 /**
  *  wext-manifest-webpack-plugin
  *
- *  @author   abhijithvijayan <abhijithvijayan.in>
- *  @license  MIT License
+ *  @author   interc0der <https://github.com/interc0der>
+ *  @license  GNU GENERAL PUBLIC LICENSE
  */
 
-import 'emoji-log';
-import {Compiler, compilation as compilationType} from 'webpack';
+import { Compiler } from 'webpack';
 
 const PLUGIN_NAME = 'wext-manifest-webpack-plugin';
 
-type Compilation = compilationType.Compilation;
-type Module = compilationType.Module;
-type Chunk = compilationType.Chunk;
+/* type CompilationType = compilationType.Compilation;
+type ModuleType = compilationType.Module;
+type ChunkType = compilationType.Chunk;
 
-interface CompilationModule extends Module {
+interface CompilationModule extends ModuleType {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   resource?: string | any[];
-}
+} */
 
 function getEntryResource(
-  module: CompilationModule | undefined
+  module:any/* : CompilationModule | undefined */
 ): string | null {
   const resource: string | null = null;
 
@@ -41,16 +38,17 @@ export class WextManifestWebpackPlugin {
      *
      *  (// ToDo: support old plugin system //)
      */
-    const {hooks} = compiler;
+    const { hooks } = compiler;
 
     // Check for hooks for 4+
     if (hooks) {
+
       // Runs plugin after a compilation has been created.
-      hooks.compilation.tap(PLUGIN_NAME, (compilation: Compilation) => {
+      hooks.compilation.tap(PLUGIN_NAME, (compilation: any) => {
         // Triggered when an asset from a chunk was added to the compilation.
         compilation.hooks.chunkAsset.tap(
           PLUGIN_NAME,
-          (chunk: Chunk, file: string) => {
+          (chunk: any, file: string) => {
             // Only handle js files with entry modules
             if (!file.endsWith('.js') || !chunk.hasEntryModule()) {
               return;
@@ -62,15 +60,18 @@ export class WextManifestWebpackPlugin {
               (resource && /manifest\.json$/.test(resource)) || false;
 
             if (isManifest) {
+
+              /*
+              * Remove to prevent chunk.files.delete is not a function leading to a compilation break 
+              *
               chunk.files = chunk.files.filter((f: string): boolean => {
                 return f !== file;
-              });
+              }); */
 
               delete compilation.assets[file];
-              // https://github.com/abhijithvijayan/wext-manifest-webpack-plugin/issues/1
-              // console.emoji('🦄', `${PLUGIN_NAME}: removed ${file}`, 29);
               console.log(`${PLUGIN_NAME}: removed ${file}`);
             }
+            
           }
         );
       });

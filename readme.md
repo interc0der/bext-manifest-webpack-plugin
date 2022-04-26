@@ -1,117 +1,83 @@
-<h1 align="center">wext-manifest-webpack-plugin</h1>
-<p align="center">Webpack plugin to solve the problem of generating js file for manifest.json entry</p>
+<!-- Project Logo -->
+<p id='tsconfig' align="center" style="text-align: center; margin:0px">
+    <a href="">
+        <img src='_media/banner-nuetral.svg' style="height: 125px"> 
+    </a>
+</p>
+
+<!-- Project Title -->
+<p align="center" style="text-align: center; margin:0px">wext-manifest-webpack-plugin</p>
+
+<!-- Project Shields -->
+<p align="center" style="text-align: center;">
+    <a style="text-decoration:none" href="https://img.shields.io/npm/v/docsify-themeable.svg?style=flat-square">
+        <img src="https://img.shields.io/npm/v/docsify-themeable.svg?style=flat-square">
+    </a>
+    <a style="text-decoration:none" href="https://img.shields.io/github/workflow/status/jhildenbiddle/docsify-themeable/Build/master?label=checks&style=flat-square">
+        <img src="https://img.shields.io/github/workflow/status/jhildenbiddle/docsify-themeable/Build/master?label=checks&style=flat-square">
+    </a>
+    <a style="text-decoration:none" href="https://img.shields.io/codacy/grade/39220ba530f24dfc9443b47f2efea5c9?style=flat-square">
+        <img src="https://img.shields.io/codacy/grade/39220ba530f24dfc9443b47f2efea5c9?style=flat-square" alt="GitHub version" height="20">
+    </a>
+    <a style="text-decoration:none" href="https://img.shields.io/visual-studio-marketplace/v/gateway-wallet?style=flat-square">
+        <img src="https://img.shields.io/visual-studio-marketplace/v/gateway-wallet?style=flat-square" alt="GitHub version" height="20">
+    </a>
+    <a style="text-decoration:none" href="https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square">
+        <img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square" alt="licenses" height="20">
+    </a>
+    <a style="text-decoration:none" href="https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2Finterc0der">
+        <img src="https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2Finterc0der" alt="licenses" height="20">
+    </a>
+</p>
+
+<p align="center" style="text-align:center; margin:0px">
+Webpack plugin to solve the problem of generating js file for manifest.json entry
+</p>
+
+## Modifications
+
+The project has been modified with updated packages to prevent incompatibiity issues with older version of webpack, fixes for builds that include MapSource files, etc.
+
+## Features
+
+coming soon...
+
+## Placeholder
+
+coming soon...
+
+## On the shoulder of giants...
+
+<p align="center">
+  <div align="center">
+This project is a derivative of a project called <a href="https://github.com/abhijithvijayan/web-extension-starter">web-extension-starter</a></div>
+<div align="center">🙋‍♂️ Made by <a href="https://github.com/abhijithvijayan">@abhijithvijayan</a></div>
+</p>
+<p align="center">
+  Support <a href="https://github.com/abhijithvijayan">abhijithvijayan</a> at 
+  <a href="https://www.paypal.me/iamabhijithvijayan" target='_blank'><b>PayPal</b></a>,
+  <a href="https://www.patreon.com/abhijithvijayan" target='_blank'><b>Patreon</b></a>,
+  <a href="https://www.buymeacoffee.com/abhijithvijayan" target='_blank'><b>Buy Me a Coffee</b></a>
+</p>
+
+## Donate
+
+<p align="center">If you find my work valuable, please consider donating</p>
+
 <div align="center">
-  <a href="https://www.npmjs.com/package/wext-manifest-webpack-plugin">
-    <img src="https://img.shields.io/npm/v/wext-manifest-webpack-plugin" alt="NPM" />
-  </a>
-  <a href="https://travis-ci.org/abhijithvijayan/wext-manifest-webpack-plugin">
-    <img src="https://travis-ci.org/abhijithvijayan/wext-manifest-webpack-plugin.svg?branch=main" alt="Travis Build" />
-  </a>
-  </a>
-  <a href="https://david-dm.org/abhijithvijayan/wext-manifest-webpack-plugin">
-    <img src="https://img.shields.io/david/abhijithvijayan/wext-manifest-webpack-plugin.svg?colorB=orange" alt="DEPENDENCIES" />
-  </a>
-  <a href="https://github.com/abhijithvijayan/wext-manifest-webpack-plugin/blob/main/license">
-    <img src="https://img.shields.io/github/license/abhijithvijayan/wext-manifest-webpack-plugin.svg" alt="LICENSE" />
-  </a>
-  <a href="https://twitter.com/intent/tweet?text=Check%20out%20wext-manifest-webpack-plugin%21%20by%20%40_abhijithv%0A%0AWebpack%20plugin%20to%20solve%20the%20problem%20of%20generating%20js%20file%20for%20manifest.json%20entry%0Ahttps%3A%2F%2Fgithub.com%2Fabhijithvijayan%2Fwext-manifest-webpack-plugin%0A%0A%23webpack%20%23manifest%20%23webextension%20%23plugin">
-     <img src="https://img.shields.io/twitter/url/http/shields.io.svg?style=social" alt="TWEET" />
-  </a>
-</div>
-<h3 align="center">🙋‍♂️ Made by <a href="https://twitter.com/_abhijithv">@abhijithvijayan</a></h3>
-<p align="center">
-  Donate:
-  <a href="https://www.paypal.me/iamabhijithvijayan" target='_blank'><i><b>PayPal</b></i></a>,
-  <a href="https://www.patreon.com/abhijithvijayan" target='_blank'><i><b>Patreon</b></i></a>
-</p>
-<p align="center">
-  <a href='https://www.buymeacoffee.com/abhijithvijayan' target='_blank'>
-    <img height='36' style='border:0px;height:36px;' src='https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/custom_images/orange_img.png' border='0' alt='Buy Me a Coffee' />
-  </a>
-</p>
-<hr />
+    <a href="https://bithomp.com/explorer/rp1kWYztSkPZ2ULBUMCdhUDzDFhR891hcd">
+        <img src='docs/_media/xrpl-github-button.svg' style="width: 200px" width="200"> 
+    </a>
 
-❤️ it? ⭐️ it on [GitHub](https://github.com/abhijithvijayan/wext-manifest-webpack-plugin/stargazers) or [Tweet](https://twitter.com/intent/tweet?text=Check%20out%20wext-manifest-webpack-plugin%21%20by%20%40_abhijithv%0A%0AWebpack%20plugin%20to%20solve%20the%20problem%20of%20generating%20js%20file%20for%20manifest.json%20entry%0Ahttps%3A%2F%2Fgithub.com%2Fabhijithvijayan%2Fwext-manifest-webpack-plugin%0A%0A%23webpack%20%23manifest%20%23webextension%20%23plugin) about it.
+rp1kWYztSkPZ2ULBUMCdhUDzDFhR891hcd
 
-## Table of Contents
+<div>
 
-- [How it works](#how-it-works)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Issues](#issues)
-  - [🐛 Bugs](#-bugs)
-- [Linting & TypeScript Config](#linting-&-typescript-config)
-- [LICENSE](#license)
+<div align="center">
+    <a href="https://xumm.app/detect/request:rp1kWYztSkPZ2ULBUMCdhUDzDFhR891hcd">
+        <img src='docs/_media/xumm-github-button.svg' style="width: 200px" width="200"> 
+    </a>
 
-## How it works
+https://xumm.app/detect/request:rp1kWYztSkPZ2ULBUMCdhUDzDFhR891hcd
 
-It just find js files from manifest entry and remove the js file from the compilation.
-
-### Looking for Web Extension starter
-
-Checkout [web-extension-starter](https://github.com/abhijithvijayan/web-extension-starter) that uses this plugin
-
-## Installation
-
-```sh
-# npm
-npm install --save-dev wext-manifest-webpack-plugin
-
-# yarn
-yarn add wext-manifest-webpack-plugin --dev
-```
-
-## Usage
-
-```js
-// ... other plugins
-const WextManifestWebpackPlugin = require("wext-manifest-webpack-plugin");
-
-module.exports = {
-    entry: {
-        manifest: './source/manifest.json',
-        // ...
-    },
-
-    output: {
-        path: path.join(destPath, targetBrowser),
-        filename: 'js/[name].js',
-    },
-
-    module: {
-        rules: [
-            {
-                type: 'javascript/auto', // prevent webpack handling json with its own loaders,
-                test: /manifest\.json$/,
-                use: 'wext-manifest-loader',
-                exclude: /node_modules/,
-            },
-        ]
-    },
-
-    plugins: [
-        new WextManifestWebpackPlugin(),
-        // ...
-    ],
-};
-```
-
-## Issues
-
-_Looking to contribute? Look for the [Good First Issue](https://github.com/abhijithvijayan/wext-manifest-webpack-plugin/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3A%22good+first+issue%22)
-label._
-
-### 🐛 Bugs
-
-Please file an issue [here](https://github.com/abhijithvijayan/wext-manifest-webpack-plugin/issues/new) for bugs, missing documentation, or unexpected behavior.
-
-[**See Bugs**](https://github.com/abhijithvijayan/wext-manifest-webpack-plugin/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3A%22type%3A+bug%22)
-
-## Linting & TypeScript Config
-
-- Shared Eslint & Prettier Configuration - [`@abhijithvijayan/eslint-config`](https://www.npmjs.com/package/@abhijithvijayan/eslint-config)
-- Shared TypeScript Configuration - [`@abhijithvijayan/tsconfig`](https://www.npmjs.com/package/@abhijithvijayan/tsconfig)
-
-## License
-
-MIT © [Abhijith Vijayan](https://abhijithvijayan.in)
+<div>
